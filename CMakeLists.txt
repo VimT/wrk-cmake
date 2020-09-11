@@ -18,7 +18,7 @@ add_definitions(-D_REENTRANT)
 
 
 if (CMAKE_SYSTEM_NAME STREQUAL "SunOS")
-    add_definitions(-D_PTHREADS -D_POSIX_C_SOUCE=200112L)
+    add_definitions(-D_PTHREADS -D_POSIX_C_SOURCE=200112L)
     list(APPEND WRK_LIBRARIES socket)
 elseif (CMAKE_SYSTEM_NAME STREQUAL "Darwin")
     set(CMAKE_EXE_LINKER_FLAGS "-pagezero_size 10000 -image_base 100000000")
