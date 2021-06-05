@@ -36,7 +36,7 @@ find_package(LuaJIT REQUIRED)
 include_directories(${LUAJIT_INCLUDE_DIR})
 list(APPEND WRK_LIBRARIES ${LUAJIT_LIBRARIES})
 
-find_package(Git)
+find_package(Git REQUIRED)
 execute_process(
         COMMAND ${GIT_EXECUTABLE} describe --tags --always --dirty
         WORKING_DIRECTORY ${CMAKE_SOURCE_DIR}
